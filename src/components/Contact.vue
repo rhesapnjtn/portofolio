@@ -140,7 +140,7 @@
             <!-- GitHub -->
 
             <a
-              href="#"
+              href="https://github.com/rhesapnjtn"
               target="_blank"
               rel="noopener noreferrer"
               class="group rounded-xl border border-white/10 p-5 transition duration-300 hover:border-white/20 hover:bg-white/[0.03]"
@@ -177,7 +177,7 @@
             <!-- LinkedIn -->
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/rhesapanjaitan"
               target="_blank"
               rel="noopener noreferrer"
               class="group rounded-xl border border-white/10 p-5 transition duration-300 hover:border-white/20 hover:bg-white/[0.03]"
