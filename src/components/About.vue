@@ -1,7 +1,8 @@
+```vue
 <template>
   <section
     id="about"
-    class="relative overflow-hidden border-t border-[#151515] bg-[#050505] px-6 py-28 md:py-36"
+    class="relative overflow-hidden border-t border-[#151515] bg-[#050505] px-5 py-24 sm:px-6 md:py-36"
   >
 
     <!-- Subtle Grid -->
@@ -25,7 +26,7 @@
       <!-- ================================================= -->
 
       <div
-        class="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end"
+        class="mb-12 flex flex-col justify-between gap-6 sm:mb-16 md:flex-row md:items-end"
       >
 
         <div>
@@ -37,7 +38,7 @@
           </p>
 
           <h2
-            class="text-4xl font-semibold tracking-[-0.03em] text-white md:text-5xl"
+            class="text-3xl font-semibold tracking-[-0.03em] text-white sm:text-4xl md:text-5xl"
           >
             A little bit
             <span class="text-gray-600">
@@ -73,7 +74,7 @@
         <div>
 
           <div
-            class="group relative max-w-md"
+            class="group relative mx-auto max-w-md lg:mx-0"
           >
 
             <!-- Image Border -->
@@ -106,7 +107,7 @@
               <!-- Image Label -->
 
               <div
-                class="absolute bottom-5 left-5 right-5 flex items-center justify-between"
+                class="absolute bottom-4 left-4 right-4 flex items-center justify-between sm:bottom-5 sm:left-5 sm:right-5"
               >
 
                 <div>
@@ -127,7 +128,7 @@
 
 
                 <span
-                  class="flex h-8 w-8 items-center justify-center rounded-full border border-[#ffffff20] bg-black/40 text-[#00ff66]"
+                  class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#ffffff20] bg-black/40 text-[#00ff66]"
                 >
                   ↗
                 </span>
@@ -145,8 +146,10 @@
             class="mt-8 grid grid-cols-2 gap-3"
           >
 
+            <!-- Location -->
+
             <div
-              class="rounded-xl border border-[#1c1c1c] bg-[#0a0a0a] p-4"
+              class="rounded-xl border border-[#1c1c1c] bg-[#0a0a0a] p-3.5 sm:p-4"
             >
 
               <p
@@ -164,8 +167,10 @@
             </div>
 
 
+            <!-- Focus -->
+
             <div
-              class="rounded-xl border border-[#1c1c1c] bg-[#0a0a0a] p-4"
+              class="rounded-xl border border-[#1c1c1c] bg-[#0a0a0a] p-3.5 sm:p-4"
             >
 
               <p
@@ -195,8 +200,10 @@
           class="flex flex-col justify-center"
         >
 
+          <!-- Introduction -->
+
           <p
-            class="max-w-2xl text-lg leading-8 text-gray-400 md:text-xl"
+            class="max-w-2xl text-base leading-7 text-gray-400 sm:text-lg sm:leading-8 md:text-xl"
           >
             I'm a fresh graduate in
             <span class="text-white">
@@ -206,8 +213,10 @@
           </p>
 
 
+          <!-- Description -->
+
           <p
-            class="mt-6 max-w-2xl text-sm leading-8 text-gray-600"
+            class="mt-5 max-w-2xl text-sm leading-7 text-gray-600 sm:mt-6 sm:leading-8"
           >
             I enjoy turning ideas into functional web applications.
             My approach combines clean interfaces, structured
@@ -219,15 +228,17 @@
           <!-- Divider -->
 
           <div
-            class="my-10 h-px w-full bg-[#1c1c1c]"
+            class="my-8 h-px w-full bg-[#1c1c1c] sm:my-10"
           ></div>
 
 
-          <!-- Education -->
+          <!-- Education + Stack -->
 
           <div
             class="grid gap-8 sm:grid-cols-2"
           >
+
+            <!-- Education -->
 
             <div>
 
@@ -281,7 +292,7 @@
                     'Tailwind CSS'
                   ]"
                   :key="tech"
-                  class="rounded-md border border-[#222222] bg-[#0a0a0a] px-3 py-1.5 text-[10px] text-gray-500 transition hover:border-[#00ff66] hover:text-[#00ff66]"
+                  class="rounded-md border border-[#222222] bg-[#0a0a0a] px-3 py-1.5 text-[10px] text-gray-500 transition duration-300 hover:border-[#00ff66] hover:text-[#00ff66]"
                 >
                   {{ tech }}
                 </span>
@@ -293,33 +304,36 @@
           </div>
 
 
-          <!-- CTA -->
+         
+<!-- CTA -->
 
-          <div
-            class="mt-10"
-          >
+<div
+  class="mt-9 sm:mt-10"
+>
 
-            <a
-              href="/resume.pdf"
-              download
-              class="group inline-flex items-center gap-3 text-sm font-medium text-white"
-            >
+  <a
+    href="/CV-Rhesa%20Ivander%20Sihol%20Azaria%20Panjaitan.pdf"
+    download="CV-Rhesa Ivander Sihol Azaria Panjaitan.pdf"
+    class="group inline-flex items-center gap-3 text-sm font-medium text-white"
+  >
 
-              <span
-                class="border-b border-[#00ff66] pb-1 transition group-hover:text-[#00ff66]"
-              >
-                Download my CV
-              </span>
+    <span
+      class="border-b border-[#00ff66] pb-1 transition duration-300 group-hover:text-[#00ff66]"
+    >
+      Download my CV
+    </span>
 
-              <span
-                class="text-[#00ff66] transition-transform duration-300 group-hover:translate-x-1"
-              >
-                →
-              </span>
+    <span
+      class="text-[#00ff66] transition-transform duration-300 group-hover:translate-x-1"
+    >
+      →
+    </span>
 
-            </a>
+  </a>
 
-          </div>
+</div>
+
+
 
         </div>
 
@@ -329,3 +343,4 @@
 
   </section>
 </template>
+```
