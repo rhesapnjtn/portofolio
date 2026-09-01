@@ -1,3 +1,4 @@
+```vue
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
@@ -53,13 +54,9 @@ const deleteRole = () => {
   clearInterval(deletingTimer)
 
   deletingTimer = setInterval(() => {
-
     if (currentRole.value.length > 0) {
-
       currentRole.value = currentRole.value.slice(0, -1)
-
     } else {
-
       clearInterval(deletingTimer)
 
       roleIndex.value =
@@ -69,7 +66,6 @@ const deleteRole = () => {
         typeRole()
       }, 400)
     }
-
   }, 45)
 }
 
@@ -89,7 +85,7 @@ onUnmounted(() => {
 
 <template>
 
-  <div class="min-h-screen bg-[#050505] text-white">
+  <div class="min-h-screen overflow-x-hidden bg-[#050505] text-white">
 
     <!-- ====================================================== -->
     <!-- NAVBAR -->
@@ -106,7 +102,7 @@ onUnmounted(() => {
 
       <section
         id="home"
-        class="relative flex min-h-screen items-center overflow-hidden px-6 pt-24 md:px-10"
+        class="relative flex min-h-screen items-center overflow-hidden px-5 pb-16 pt-28 sm:px-6 md:px-10 md:pt-24"
       >
 
         <!-- Background Grid -->
@@ -125,7 +121,7 @@ onUnmounted(() => {
         <!-- Subtle Green Glow -->
 
         <div
-          class="pointer-events-none absolute right-[10%] top-[20%] h-96 w-96 rounded-full bg-[#00ff66] opacity-[0.025] blur-3xl"
+          class="pointer-events-none absolute right-[10%] top-[20%] h-72 w-72 rounded-full bg-[#00ff66] opacity-[0.025] blur-3xl sm:h-96 sm:w-96"
         ></div>
 
 
@@ -134,24 +130,22 @@ onUnmounted(() => {
         <!-- ================================================== -->
 
         <div
-          class="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-16 lg:grid-cols-2"
+          class="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16"
         >
 
           <!-- ================================================== -->
           <!-- LEFT CONTENT -->
           <!-- ================================================== -->
 
-          <div>
+          <div class="min-w-0">
 
             <!-- Status -->
 
             <div
-              class="mb-7 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.02] px-3.5 py-2"
+              class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.02] px-3.5 py-2 sm:mb-7"
             >
 
-              <span
-                class="relative flex h-2 w-2"
-              >
+              <span class="relative flex h-2 w-2">
 
                 <span
                   class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00ff66] opacity-40"
@@ -165,7 +159,7 @@ onUnmounted(() => {
 
 
               <span
-                class="text-[10px] font-medium uppercase tracking-[0.2em] text-gray-500"
+                class="text-[9px] font-medium uppercase tracking-[0.18em] text-gray-500 sm:text-[10px] sm:tracking-[0.2em]"
               >
                 Available for work
               </span>
@@ -176,7 +170,7 @@ onUnmounted(() => {
             <!-- Heading -->
 
             <h1
-              class="max-w-3xl text-5xl font-semibold leading-[0.95] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-[76px]"
+              class="max-w-3xl text-[42px] font-semibold leading-[0.98] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-[76px]"
             >
 
               Building modern
@@ -205,7 +199,7 @@ onUnmounted(() => {
             <!-- Description -->
 
             <p
-              class="mt-8 max-w-xl text-base leading-7 text-gray-500 md:text-lg"
+              class="mt-6 max-w-xl text-sm leading-6 text-gray-500 sm:mt-8 sm:text-base sm:leading-7 md:text-lg"
             >
               I design and develop modern web applications with
               a focus on clean interfaces, responsive layouts,
@@ -216,14 +210,14 @@ onUnmounted(() => {
             <!-- Buttons -->
 
             <div
-              class="mt-9 flex flex-wrap gap-3"
+              class="mt-7 flex flex-wrap gap-3 sm:mt-9"
             >
 
               <!-- Projects -->
 
               <a
                 href="#projects"
-                class="group inline-flex items-center gap-3 rounded-lg bg-[#00ff66] px-5 py-3 text-sm font-medium text-black transition duration-300 hover:bg-[#7affad]"
+                class="group inline-flex items-center gap-3 rounded-lg bg-[#00ff66] px-4 py-3 text-sm font-medium text-black transition duration-300 hover:bg-[#7affad] sm:px-5"
               >
 
                 View projects
@@ -242,7 +236,7 @@ onUnmounted(() => {
               <a
                 href="/resume.pdf"
                 download
-                class="inline-flex items-center gap-3 rounded-lg border border-white/[0.12] bg-white/[0.02] px-5 py-3 text-sm font-medium text-gray-400 transition duration-300 hover:border-white/30 hover:text-white"
+                class="inline-flex items-center gap-3 rounded-lg border border-white/[0.12] bg-white/[0.02] px-4 py-3 text-sm font-medium text-gray-400 transition duration-300 hover:border-white/30 hover:text-white sm:px-5"
               >
 
                 Download CV
@@ -259,7 +253,7 @@ onUnmounted(() => {
             <!-- Tech Stack -->
 
             <div
-              class="mt-10 flex flex-wrap gap-2"
+              class="mt-8 flex flex-wrap gap-2 sm:mt-10"
             >
 
               <span
@@ -271,7 +265,7 @@ onUnmounted(() => {
                   'Tailwind CSS'
                 ]"
                 :key="tech"
-                class="rounded-md border border-white/[0.08] bg-white/[0.015] px-3 py-1.5 text-[11px] font-medium text-gray-500 transition duration-300 hover:border-[#00ff66]/40 hover:text-[#00ff66]"
+                class="rounded-md border border-white/[0.08] bg-white/[0.015] px-3 py-1.5 text-[10px] font-medium text-gray-500 transition duration-300 hover:border-[#00ff66]/40 hover:text-[#00ff66] sm:text-[11px]"
               >
                 {{ tech }}
               </span>
@@ -285,23 +279,25 @@ onUnmounted(() => {
           <!-- RIGHT CODE WINDOW -->
           <!-- ================================================== -->
 
-          <div class="hidden lg:block">
+          <div
+            class="order-2 block w-full lg:order-none"
+          >
 
             <div
-              class="relative mx-auto max-w-lg"
+              class="relative mx-auto w-full max-w-lg"
             >
 
               <!-- Glow -->
 
               <div
-                class="pointer-events-none absolute -inset-12 rounded-full bg-[#00ff66] opacity-[0.025] blur-3xl"
+                class="pointer-events-none absolute -inset-8 rounded-full bg-[#00ff66] opacity-[0.025] blur-3xl sm:-inset-12"
               ></div>
 
 
               <!-- Window -->
 
               <div
-                class="relative overflow-hidden rounded-2xl border border-white/[0.10] bg-[#0a0a0a] shadow-2xl"
+                class="relative w-full overflow-hidden rounded-xl border border-white/[0.10] bg-[#0a0a0a] shadow-2xl sm:rounded-2xl"
               >
 
                 <!-- ================================================= -->
@@ -309,42 +305,42 @@ onUnmounted(() => {
                 <!-- ================================================= -->
 
                 <div
-                  class="flex items-center justify-between border-b border-white/[0.08] bg-[#0d0d0d] px-5 py-4"
+                  class="flex items-center justify-between border-b border-white/[0.08] bg-[#0d0d0d] px-4 py-3 sm:px-5 sm:py-4"
                 >
 
-                  <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-1.5 sm:gap-2">
 
                     <!-- Red -->
 
                     <span
-                      class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"
+                      class="h-2 w-2 rounded-full bg-[#ff5f57] sm:h-2.5 sm:w-2.5"
                     ></span>
 
                     <!-- Yellow -->
 
                     <span
-                      class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"
+                      class="h-2 w-2 rounded-full bg-[#febc2e] sm:h-2.5 sm:w-2.5"
                     ></span>
 
                     <!-- Green -->
 
                     <span
-                      class="h-2.5 w-2.5 rounded-full bg-[#28c840]"
+                      class="h-2 w-2 rounded-full bg-[#28c840] sm:h-2.5 sm:w-2.5"
                     ></span>
 
                   </div>
 
 
                   <div
-                    class="flex items-center gap-2"
+                    class="flex min-w-0 items-center gap-2"
                   >
 
                     <span
-                      class="h-1.5 w-1.5 rounded-full bg-[#00ff66]"
+                      class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#00ff66]"
                     ></span>
 
                     <span
-                      class="text-[10px] uppercase tracking-[0.2em] text-gray-600"
+                      class="truncate text-[8px] uppercase tracking-[0.16em] text-gray-600 sm:text-[10px] sm:tracking-[0.2em]"
                     >
                       portfolio.js
                     </span>
@@ -359,15 +355,15 @@ onUnmounted(() => {
                 <!-- ================================================= -->
 
                 <div
-                  class="overflow-x-auto p-7 font-mono text-[12px] leading-7"
+                  class="overflow-x-auto p-4 font-mono text-[10px] leading-6 sm:p-7 sm:text-[12px] sm:leading-7"
                 >
 
                   <!-- Line 01 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       01
                     </span>
@@ -393,15 +389,15 @@ onUnmounted(() => {
 
                   <!-- Line 02 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       02
                     </span>
 
-                    <span class="ml-0 text-gray-500">
+                    <span class="text-gray-500">
                       name:
                     </span>
 
@@ -418,10 +414,10 @@ onUnmounted(() => {
 
                   <!-- Line 03 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       03
                     </span>
@@ -443,10 +439,10 @@ onUnmounted(() => {
 
                   <!-- Line 04 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       04
                     </span>
@@ -464,10 +460,10 @@ onUnmounted(() => {
 
                   <!-- Line 05 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       05
                     </span>
@@ -485,10 +481,10 @@ onUnmounted(() => {
 
                   <!-- Line 06 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       06
                     </span>
@@ -506,10 +502,10 @@ onUnmounted(() => {
 
                   <!-- Line 07 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       07
                     </span>
@@ -527,10 +523,10 @@ onUnmounted(() => {
 
                   <!-- Line 08 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       08
                     </span>
@@ -548,10 +544,10 @@ onUnmounted(() => {
 
                   <!-- Line 09 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       09
                     </span>
@@ -573,10 +569,10 @@ onUnmounted(() => {
 
                   <!-- Line 10 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       10
                     </span>
@@ -598,10 +594,10 @@ onUnmounted(() => {
 
                   <!-- Line 11 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       11
                     </span>
@@ -619,10 +615,10 @@ onUnmounted(() => {
 
                   <!-- Line 12 -->
 
-                  <div class="flex">
+                  <div class="flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       12
                     </span>
@@ -636,10 +632,10 @@ onUnmounted(() => {
 
                   <!-- Cursor -->
 
-                  <div class="mt-2 flex">
+                  <div class="mt-2 flex min-w-max">
 
                     <span
-                      class="mr-6 select-none text-gray-700"
+                      class="mr-4 select-none text-gray-700 sm:mr-6"
                     >
                       13
                     </span>
@@ -658,11 +654,11 @@ onUnmounted(() => {
                 <!-- ================================================= -->
 
                 <div
-                  class="flex items-center justify-between border-t border-white/[0.08] bg-[#0d0d0d] px-5 py-3.5"
+                  class="flex items-center justify-between border-t border-white/[0.08] bg-[#0d0d0d] px-4 py-3 sm:px-5 sm:py-3.5"
                 >
 
                   <span
-                    class="font-mono text-[10px] text-gray-600"
+                    class="font-mono text-[9px] text-gray-600 sm:text-[10px]"
                   >
                     ~/portfolio
                   </span>
@@ -677,7 +673,7 @@ onUnmounted(() => {
                     ></span>
 
                     <span
-                      class="font-mono text-[10px] text-gray-500"
+                      class="font-mono text-[9px] text-gray-500 sm:text-[10px]"
                     >
                       ready
                     </span>
@@ -756,3 +752,4 @@ onUnmounted(() => {
   </div>
 
 </template>
+```
