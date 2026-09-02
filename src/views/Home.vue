@@ -233,19 +233,7 @@ onUnmounted(() => {
 
               <!-- CV -->
 
-              <a
-                href="/resume.pdf"
-                download
-                class="inline-flex items-center gap-3 rounded-lg border border-white/[0.12] bg-white/[0.02] px-4 py-3 text-sm font-medium text-gray-400 transition duration-300 hover:border-white/30 hover:text-white sm:px-5"
-              >
-
-                Download CV
-
-                <span class="text-gray-600">
-                  ↓
-                </span>
-
-              </a>
+              
 
             </div>
 
