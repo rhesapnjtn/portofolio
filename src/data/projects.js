@@ -68,8 +68,7 @@ const projects = [
     category: 'Creative Studio',
 
     description:
-      'A modern web-based creative studio platform designed to showcase photography services, manage portfolios, and provide an engaging digital experience for customers.',
-
+  'A web-based platform for showcasing photo editing services and creative portfolios, providing customers with an easy way to explore and request professional photo editing services.',
     // Gambar utama yang tampil di card project
     image: '/images/projects/teras1.png',
 

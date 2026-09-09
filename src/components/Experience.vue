@@ -410,7 +410,7 @@
             <p
               class="font-mono text-2xl font-medium text-white"
             >
-              04+
+              03
             </p>
 
             <p
