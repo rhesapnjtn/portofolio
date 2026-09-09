@@ -39,10 +39,10 @@ const projects = [
     description:
       'A web-based system for managing student activity points and generating SKPI documents efficiently.',
 
-    // Gambar utama project
+    // Gambar utama yang tampil di card project
     image: '/images/projects/skpi1.png',
 
-    // Gallery SKPI
+    // Seluruh screenshot yang tampil di View Details
     images: [
       '/images/projects/skpi1.png',
       '/images/projects/skpi2.png',
@@ -52,6 +52,38 @@ const projects = [
     ],
 
     technologies: [
+      'Laravel',
+      'PHP',
+      'MySQL',
+      'Tailwind CSS',
+    ],
+
+    github: '#',
+    demo: '#',
+  },
+
+  {
+    id: 3,
+    title: 'Teras Memori',
+    category: 'Creative Studio',
+
+    description:
+      'A modern web-based creative studio platform designed to showcase photography services, manage portfolios, and provide an engaging digital experience for customers.',
+
+    // Gambar utama yang tampil di card project
+    image: '/images/projects/teras1.png',
+
+    // Seluruh screenshot yang tampil di View Details
+    images: [
+      '/images/projects/teras1.png',
+      '/images/projects/teras2.png',
+      '/images/projects/teras3.png',
+      '/images/projects/teras4.png',
+      '/images/projects/teras5.png',
+    ],
+
+    technologies: [
+      'Vue.js',
       'Laravel',
       'PHP',
       'MySQL',
